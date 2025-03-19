@@ -33,6 +33,7 @@ const fetchRecipie=()=>{
     if(data.meals)
       {
         displayRecipes(data.meals);
+        document.getElementById('search').value = "";
       }
       else
       {
@@ -106,7 +107,7 @@ const fetchRecipie=()=>{
 
   const home=document.getElementById('search-btn').addEventListener('click',fetchRecipie);
   if(!home){
-    container.innerHTML=`<div class="img"><img src="/image/home.jpg" alt="homeimage" class="projectImage"></div>`;
+    container.innerHTML=`<div class="img"><img src="/image/home.png" alt="homeimage" class="projectImage"></div>`;
 
   }
  
