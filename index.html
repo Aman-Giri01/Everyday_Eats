@@ -15,8 +15,8 @@
        </div>
        <div class="search">
         <span id="mode"><i class="fa-solid fa-lightbulb"></i></span>
-        <input type="text" id="search" placeholder="Search recipe ">
-        <button type="submit" class="btn">Search</button>
+        <input type="text" id="search" placeholder="Search recipe " autocomplete="off">
+        <button id="search-btn" class="btn">Search</button>
        </div>
     </navbar>
   </header>
@@ -24,9 +24,20 @@
   <div class="container">
 
   </div>
-  <template>
 
+  <template id="template">
+    <div class="card">
+      <div class="imageContainer">
+        <img src="" alt="" class="projectImage">
+      </div>
+      <div class="name"></div>
+      <div class="cuisine"></div>
+      <span><a href="#" class="btnn visit-link" target="_blank">View Recipe <i class="fa-solid fa-bowl-food"></i></a></span>
+      <span><a href="#" class="btnn source-link" target="_blank">Watch Video <i class="fa-brands fa-youtube"></i></a></span>
+      <div class="cuisine msg"></div>
+    </div>
   </template>
+
   <footer class="fotter">
     <a href="https://github.com/Aman-Giri01"><i class="fa-brands fa-github"></i></a>
     <p>Designed & created by Aman Giri</p>
