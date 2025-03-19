@@ -157,7 +157,7 @@ html{
   height: 100%;
   object-fit: cover;
 }
-
+.img{height:50rem;width:50rem}
 .name {
   font-size: 1.9rem;
   font-weight: bold;
@@ -167,8 +167,8 @@ html{
 .cuisine ,.category {
   font-size: 1.4rem;
   color: #666;
-  /* margin-bottom: .5rem; */
   padding: 0 10px;
+  text-align: justify;
 }
 
 .btnn {
@@ -189,6 +189,48 @@ html{
 
 
 /* --------------------end card -------------------------------- */
+
+/* ---------------------Ingrdient pop up ------------------------*/
+
+.recipe-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  max-width: 60rem;
+  max-height: 70vh;
+  width: 90%;
+  background: var(--cardColor);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  padding: 1rem;
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #e85d04;
+}
+.ingredients-list {
+  padding-left: 20px;
+}
+
+.ingredients-list li {
+  margin-bottom: 5px;
+}
+
+
+/* ----------------- end Ingredient pop up ---------------------- */
 
 /* -----------------------Dark Mode --------------------  */
 
@@ -217,8 +259,8 @@ html{
 .dark-mode .cuisine , .dark-mode .category {
   color:var(--Dark-textColor);
 }
-
-.dark-mode .btnn{background: var(--Dark-mainColor); &:hover{background:var(--Dark-buttoncolor);}}
+.dark-mode .recipe-modal{background: var(--Dark-cardColor);}
+.dark-mode .btnn{background: var(--Dark-mainColor);}
 
 /* ---------------------End Dark Mode--------------------- */
 
@@ -260,7 +302,7 @@ html{
     
   }
   .search button{
-    padding: 8.rem .12rem;
+    padding:.8rem .12rem;
   }
 
   .fotter {
@@ -271,6 +313,17 @@ html{
 
   .logo img {
     width: 25%;
+  }
+  .recipe-modal {
+    width: 95%; 
+    max-height: 85vh; 
+    padding: 15px;
+  }
+
+  .close-btn {
+      font-size: 18px;
+      top: 8px;
+      right: 10px;
   }
 }
 
@@ -306,3 +359,4 @@ html{
     font-size: 1.4rem;
   }
 }
+
